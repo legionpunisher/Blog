@@ -9,13 +9,14 @@ class Config:
     UPLOADED_PHOTOS_DEST ='app/static/photos'
 
     #  email configurations
+    SQLALCHEMY_TRACK_MODIFICATIONS = False 
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-    SUBJECT_PREFIX = 'Emdees Blog!'
-    SENDER_EMAIL = 'staremdee@gmail.com'
+    SUBJECT_PREFIX = 'FALCON BLOG!'
+    SENDER_EMAIL = 'mbuguamoses656@gmail.com'
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
 

@@ -1,15 +1,18 @@
 {% extends 'base.html'%} {% import "bootstrap/wtf.html" as wtf %} {% block content %}
 <br>
 
-<div class="container">
-    <div style="width: 60%; height:50%">
+<body>
 
 
-        <br> {{ wtf.quick_form(blogpost_form) }}{{simplemde.load}}
+    <div class="container" style="background-image: url(../static/photos/back.jpg)">
+        <div style="width: 60%; height:50% ">
 
+
+            <br> {{ wtf.quick_form(blogpost_form) }}{{simplemde.load}}
+
+
+        </div>
 
     </div>
-
-</div>
-
+</body>
 {% endblock %}

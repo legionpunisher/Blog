@@ -4,21 +4,21 @@ from flask_login import login_required,current_user
 from ..email import mail_message
 from ..models import *
 from . import main
-from .. import db,photos
-from .forms import *
+from .. import db,photos 
+from .forms import  *
 import markdown2
-
-@main.route('/')
+from ..request import get_quote
+@main.route('/' , methods = ["GET", "POST"])
 def index():
     '''
     my index page
     return
     '''
     blogs = Blogs.query.order_by(Blogs.date.desc()).all()
+    quote = get_quote()
 
-
-    title= "Emdee's Blog"
-    return render_template('index.html',title=title, blogs=blogs)
+    title= "FALCON BLOG"
+    return render_template('index.html',title=title, blogs=blogs,quote=quote)
 
 @main.route('/user/<uname>')
 def profile(uname):
@@ -215,7 +215,7 @@ def subscriber():
 
         mail_message("Hello, Welcome To Emdee's Blog.","email/welcome_subscriber",subscriber.email,subscriber=subscriber)
 
-        title= "Emdee's Blog"
+        title= "FALCON'S BLOG"
         return render_template('index.html',title=title, blogs=blogs)
 
     subscriber = Blogs.query.all()

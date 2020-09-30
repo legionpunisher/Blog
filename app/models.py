@@ -59,6 +59,16 @@ class Blogs(db.Model):
     def __repr__(self):
         return f"Blogs {self.id}','{self.date}')"
 
+
+
+class Quote:
+    """
+    Blueprint class for quotes consumed from API
+    """
+    def __init__(self, author, quote):
+        self.author = author
+        self.quote = quote
+
 class Comments(db.Model):
     __tablename__ = 'comments'
     id = db.Column(db.Integer, primary_key=True)
