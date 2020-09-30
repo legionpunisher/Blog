@@ -17,7 +17,7 @@ def index():
     blogs = Blogs.query.order_by(Blogs.date.desc()).all()
     quote = get_quote()
 
-    title= "FALCON BLOG"
+    title= "FALCON's BLOG"
     return render_template('index.html',title=title, blogs=blogs,quote=quote)
 
 @main.route('/user/<uname>')
