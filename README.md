@@ -6,8 +6,8 @@
  -A Blog application where a user can share their opinions
 
 # Setup/Installation Requirements
-- copy the clone http on the Repository
- https://github.com/legionpunisher/Blog.git
+-copy the clone http on the Repository
+ - https://github.com/legionpunisher/Blog.git
 - Open your Terminal and on your local repo run git clone command + the url
 - once cloned, open the code using your preferred text editor .... this can be done by running the (code .) command in terminal
 
